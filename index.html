@@ -26,7 +26,7 @@
 <div class="vt_wrapper">
 <header class="vt_header">
 	<a href="">
-		<img src="dist/assets/sample-icon.png">
+		<img src="dist/assets/logo.svg">
 	</a>
 	<nav>
 		<ul>
@@ -50,6 +50,11 @@
 			</li>
 		</ul>
 	</nav>
+	<button id="js-hamburger" class="vt_menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 </header>
 <div id="loading" class="vt_loading">
 	<div class="vt_loading-icon">
@@ -230,31 +235,11 @@
 <script src="dist/js/smoothscroll.min.js"></script>
 <!-- Loading -->
 <script src="dist/js/loading.min.js"></script>
+<!-- Hamburger -->
+<script src="dist/js/hamburger.min.js"></script>
 <!-- Swiper -->
 <script src="dist/js/swiper-bundle.min.js"></script>
 <script>
-	////////////////////
-	// mySwiperCover
-	////////////////////
-	const mySwiperCover = new Swiper ('#mySwiperCover.swiper', {
-		effect: 'fade',
-		fadeEffect: {
-		  crossFade: true,
-		},
-		loop: true,
-		loopAdditionalSlides: 1,
-		speed: 2000,
-		autoplay: {
-		  delay: 7000,
-		  disableOnInteraction: false,
-		  waitForTransition: false,
-		},
-		followFinger: false,
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-		},
-	});
 	////////////////////
 	// mySwiperCard
 	////////////////////
@@ -276,43 +261,6 @@
 			}
 		},
 	});
-	////////////////////
-	// mySwiperCardSwitch
-	////////////////////
-	let mySwiperCardSwitch = null;
-	const mediaQuery = window.matchMedia('(max-width: 1024px)');
-	const checkBreakpoint = (e) => {
-		if (e.matches) {
-			initMySwiperCardSwitch();
-		} else if (mySwiperCardSwitch) {
-			mySwiperCardSwitch.destroy(false, true);
-		}
-	}
-	const initMySwiperCardSwitch = () => {
-		mySwiperCardSwitch = new Swiper('#mySwiperCardSwitch.swiper', {
-			slidesPerView: 1,
-			spaceBetween: 16,
-			loop: true,
-			loopAdditionalSlides: 1,
-			speed: 1000,
-			autoplay: {
-				delay: 4000,
-				disableOnInteraction: false,
-			},
-			grabCursor: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			breakpoints: {
-				600: {
-					slidesPerView: 2,
-				}
-			},
-		});
-	};
-	mediaQuery.addListener(checkBreakpoint);
-	checkBreakpoint(mediaQuery);
 </script>
 </body>
 </html>

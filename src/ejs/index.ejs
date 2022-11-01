@@ -4,7 +4,6 @@
 <body>
 <div class="<%= siteName %>_wrapper">
 <%- include( 'Components/_header', { siteName:siteName } ); %>
-
 <%- include( 'Components/_loading', { siteName:siteName } ); %>
 <main>
 <%- include( 'Components/_mv', { siteName:siteName } ); %>
@@ -34,32 +33,12 @@
 <!-- Loading -->
 <script src="dist/js/loading.min.js"></script>
 
+<!-- Hamburger -->
+<script src="dist/js/hamburger.min.js"></script>
+
 <!-- Swiper -->
 <script src="dist/js/swiper-bundle.min.js"></script>
 <script>
-	////////////////////
-	// mySwiperCover
-	////////////////////
-	const mySwiperCover = new Swiper ('#mySwiperCover.swiper', {
-		effect: 'fade',
-		fadeEffect: {
-		  crossFade: true,
-		},
-		loop: true,
-		loopAdditionalSlides: 1,
-		speed: 2000,
-		autoplay: {
-		  delay: 7000,
-		  disableOnInteraction: false,
-		  waitForTransition: false,
-		},
-		followFinger: false,
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-		},
-	});
-
 	////////////////////
 	// mySwiperCard
 	////////////////////
@@ -81,48 +60,6 @@
 			}
 		},
 	});
-
-	////////////////////
-	// mySwiperCardSwitch
-	////////////////////
-	let mySwiperCardSwitch = null;
-	const mediaQuery = window.matchMedia('(max-width: 1024px)');
-
-	const checkBreakpoint = (e) => {
-		if (e.matches) {
-			initMySwiperCardSwitch();
-		} else if (mySwiperCardSwitch) {
-			mySwiperCardSwitch.destroy(false, true);
-		}
-	}
-
-	const initMySwiperCardSwitch = () => {
-		mySwiperCardSwitch = new Swiper('#mySwiperCardSwitch.swiper', {
-			slidesPerView: 1,
-			spaceBetween: 16,
-			loop: true,
-			loopAdditionalSlides: 1,
-			speed: 1000,
-			autoplay: {
-				delay: 4000,
-				disableOnInteraction: false,
-			},
-			grabCursor: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			breakpoints: {
-				600: {
-					slidesPerView: 2,
-				}
-			},
-		});
-	};
-
-	mediaQuery.addListener(checkBreakpoint);
-
-	checkBreakpoint(mediaQuery);
 </script>
 
 </body>
