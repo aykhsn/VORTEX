@@ -1,0 +1,47 @@
+/**********************
+ header
+***********************/
+.#{$siteName} {
+	&_header {
+		--header-bg-color: #FFFFFF;
+        --header-text-color: var(--#{$siteName}_main-text-color);
+        --header-gap: 1rem;
+        --header-space: 1rem;
+        --header-logo-h: 4rem;
+
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--header-gap);
+		padding-left: var(--header-space);
+		padding-right: var(--header-space);
+		color: var(--header-text-color);
+		background-color: var(--header-bg-color);
+
+		& a {
+			display: inline-block;
+			color: inherit;
+		}
+
+		& img {
+			height: var(--header-logo-h);
+			max-width: fit-content;
+		}
+
+		& nav {
+			& ul {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: flex-end;
+				
+				& a {
+					display: inline-block;
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+			}
+		}
+	}
+}

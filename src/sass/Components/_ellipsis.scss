@@ -1,0 +1,40 @@
+/**********************
+ Ellipsis
+ - Multiline text with ellipsis
+ - Supported IE and Firefox
+***********************/
+.#{$siteName} {
+    &_ellipsis {
+        --font-size-base: 1rem;
+        --line-height-computed: 1.6;
+        --lines-to-show: 2;
+
+        width: 100%;
+        overflow: hidden;
+
+        p {
+            position: relative;
+            margin: 0;
+            font-size: var(--font-size-base);
+            height: calc(var(--font-size-base) * var(--line-height-computed) * var(--lines-to-show));
+            line-height: var(--line-height-computed);
+
+            &:before,
+            &:after {
+                position: absolute;
+            }
+
+            &:before {
+                content: "...";
+                top: calc(var(--font-size-base) * var(--line-height-computed) * (var(--lines-to-show) - 1));
+                right: 0;
+            }
+
+            &:after {
+                content: "";
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

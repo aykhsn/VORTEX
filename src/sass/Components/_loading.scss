@@ -1,0 +1,31 @@
+/**********************
+ loading
+***********************/
+.#{$siteName} {
+	&_loading {
+		--loading-bg-color: var(--#{$siteName}_bg-color);
+		--loading-icon-w: 10rem;
+
+		position: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--loading-bg-color);
+		z-index: 100;
+		transition: var(--#{$siteName}_transition);
+
+		&-icon {
+			width: var(--loading-icon-w);
+			height: auto;
+		}
+
+		&.loaded {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}

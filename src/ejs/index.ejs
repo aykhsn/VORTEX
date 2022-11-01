@@ -1,0 +1,128 @@
+<% var siteName = 'vt'; %>
+<html lang="ja">
+<%- include( 'Components/_head' ); %>
+<body>
+<div class="<%= siteName %>_wrapper">
+<%- include( 'Components/_header', { siteName:siteName } ); %>
+<%- include( 'Components/_loading', { siteName:siteName } ); %>
+<main>
+<%- include( 'Components/_mv', { siteName:siteName } ); %>
+<section class="<%= siteName %>_block">
+	<div class="<%= siteName %>_block-inner">
+		<div class="<%= siteName %>_block-heading">
+			<h1>Dinosaur</h1>
+		</div>
+		<div class="<%= siteName %>_card-row <%= siteName %>_card-row_half">
+			<div class="<%= siteName %>_frame">
+				<img src="dist/assets/sample.png">
+			</div>
+			<div>
+				<p>通俗的には「恐竜」という言葉は往々にして「大昔の爬虫類」という程度の把握しやすいイメージで認識されており、同じ地質時代に生息していた各種の爬虫類のほかに、古生代に生息していた一部の非哺乳類型の単弓類なども含めた概念として呼ばれる場合が少なくない。「恐竜」とは系統的に異なり、大衆的に恐竜の一群としてイメージされやすい翼竜・魚竜・首長竜・モササウルスなどは一切含まない独立した分類群である。恐竜展や子供向けの恐竜図鑑などではこれらの古代生物たちまで含めて展示・掲載するものがよく見られていて、初心者にとっては混同し易い。</p>
+			</div>
+		</div>
+	</div>
+</section>
+<%- include( 'Components/_swiperCard', { siteName:siteName } ); %>
+</main>
+<%- include( 'Components/_footer', { siteName:siteName } ); %>
+</div>
+
+<!-- Smooth Scroll -->
+<script src="dist/js/smoothscroll.min.js"></script>
+
+<!-- Loading -->
+<script src="dist/js/loading.min.js"></script>
+
+<!-- Swiper -->
+<script src="dist/js/swiper-bundle.min.js"></script>
+<script>
+	////////////////////
+	// mySwiperCover
+	////////////////////
+	const mySwiperCover = new Swiper ('#mySwiperCover.swiper', {
+		effect: 'fade',
+		fadeEffect: {
+		  crossFade: true,
+		},
+		loop: true,
+		loopAdditionalSlides: 1,
+		speed: 2000,
+		autoplay: {
+		  delay: 7000,
+		  disableOnInteraction: false,
+		  waitForTransition: false,
+		},
+		followFinger: false,
+		pagination: {
+		  el: '.swiper-pagination',
+		  clickable: true,
+		},
+	});
+
+	////////////////////
+	// mySwiperCard
+	////////////////////
+	const mySwiperCard = new Swiper('#mySwiperCard.swiper', {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		grabCursor: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1025: {
+				spaceBetween: 32,
+			}
+		},
+	});
+
+	////////////////////
+	// mySwiperCardSwitch
+	////////////////////
+	let mySwiperCardSwitch = null;
+	const mediaQuery = window.matchMedia('(max-width: 1024px)');
+
+	const checkBreakpoint = (e) => {
+		if (e.matches) {
+			initMySwiperCardSwitch();
+		} else if (mySwiperCardSwitch) {
+			mySwiperCardSwitch.destroy(false, true);
+		}
+	}
+
+	const initMySwiperCardSwitch = () => {
+		mySwiperCardSwitch = new Swiper('#mySwiperCardSwitch.swiper', {
+			slidesPerView: 1,
+			spaceBetween: 16,
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 1000,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			grabCursor: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				600: {
+					slidesPerView: 2,
+				}
+			},
+		});
+	};
+
+	mediaQuery.addListener(checkBreakpoint);
+
+	checkBreakpoint(mediaQuery);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<section class="<%= siteName %>_swiper-card">
+    <div id="mySwiperCard" class="swiper">
+        <div class="swiper-wrapper">
+            <% for (var i = 0; i < 10; i++) { %>
+            <a href="#" class="swiper-slide">
+                <article class="slide">
+                    <div class="slide-media <%= siteName %>_frame">
+                        <img src="dist/assets/sample.png">
+                    </div>
+                    <div class="slide-content">
+                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+                        <div class="slide-title <%= siteName %>_ellipsis">
+                            <p>通俗的には「恐竜」という言葉は往々にして「大昔の爬虫類」という程度の把握しやすいイメージで認識されており、同じ地質時代に生息していた各種の爬虫類のほかに、古生代に生息していた一部の非哺乳類型の単弓類なども含めた概念として呼ばれる場合が少なくない。</p>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <% } %>
+        </div>
+        <div class="swiper-controller">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>

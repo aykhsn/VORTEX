@@ -1,0 +1,19 @@
+<section class="<%= siteName %>_swiper-cover">
+    <div id="mySwiperCover" class="swiper">
+        <div class="swiper-wrapper">
+            <% for (var i = 0; i < 5; i++) { %>
+            <a href="#" class="swiper-slide">
+                <div class="slide">
+                    <div class="slide-media <%= siteName %>_frame">
+                        <img src="dist/assets/sample.png">
+                    </div>
+                    <div class="slide-title">
+                        <h1>Dinosaur <%= i + 1 %></h1>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>

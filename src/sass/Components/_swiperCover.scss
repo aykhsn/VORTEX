@@ -1,0 +1,132 @@
+/**********************
+ Swiper
+***********************/
+.#{$siteName} {
+    &_swiper-cover {
+        & .swiper {
+            --pagination-bullet-color: var(--#{$siteName}_link-color);
+            --slide-title-color: var(--#{$siteName}_link-color);
+
+            width: 100vw;
+            height: 50vw;
+
+            @include mediaQuery(m) {
+                width: 100vw;
+                height: 100vw;
+            }
+        }
+
+        /**********************
+         Fade
+        ***********************/
+        .swiper-fade {
+            .swiper-slide {
+                transition-property: opacity, transform !important;
+                pointer-events: none;
+            }
+
+            .swiper-slide-active {
+                pointer-events: auto;
+            }
+        }
+
+        /**********************
+         Pagination
+        ***********************/
+        .swiper-pagination {
+            position: absolute;
+            bottom: 1rem;
+            right: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding-right: 4rem;
+            padding-left: 4rem;
+            margin: auto;
+            z-index: 2;
+
+            &-bullet {
+                display: block;
+                height: 3px;
+                width: 100%;
+                max-width: 3rem;
+                background-color: rgba(255, 255, 255, 0.7);
+                transition: .8s cubic-bezier(.2, 1, .2, 1);
+                cursor: pointer;
+            }
+
+            &-bullet-active {
+                background-color: var(--pagination-bullet-color);
+            }
+        }
+
+
+        /**********************
+         Media and Title
+        ***********************/
+        .slide-media {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            & img {
+                transition: 7s 1s ease-out;
+            }
+        }
+
+        .slide-title {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            & h1 {
+                font-size: 4rem;
+                font-weight: 500;
+                color: var(--slide-title-color);
+
+                @include mediaQuery(m) {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .swiper-slide[class*=-active] {
+            & .slide-media img {
+                transition-delay: 0s;
+                transform: scale(1.05);
+            }
+
+            & .slide-title h1 {
+                animation: blurred-fadeIn 2s 0.5s cubic-bezier(.2, 1, .2, 1) both;
+            }
+        }
+    }
+}
+
+@keyframes blurred-fadeIn {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+        filter: blur(300px);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}

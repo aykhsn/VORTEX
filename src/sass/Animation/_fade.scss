@@ -1,0 +1,19 @@
+/**********************
+ Animation - Fade
+***********************/
+
+.#{$siteName} {
+	&_fadeIn {
+		animation-name: fadeIn;
+		animation-duration: 1.4s;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+	}
+}

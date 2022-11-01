@@ -1,0 +1,22 @@
+/**********************
+ footer
+***********************/
+.#{$siteName} {
+	&_footer {
+		--footer-bg-color: var(--#{$siteName}_main-color);
+        --footer-text-color: #ffffff;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		color: var(--footer-text-color);
+		background-color: var(--footer-bg-color);
+
+		& * {
+			color: inherit;
+		}
+	}
+}

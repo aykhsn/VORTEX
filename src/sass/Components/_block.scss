@@ -1,0 +1,41 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ block
+***********************/
+.#{$siteName} {
+    &_block {
+        --block-space-t: 4rem;
+        --block-space-b: 6.5rem;
+        --block-space-v: 4rem;
+        --block-heading-font-size: var(--#{$siteName}_font-size-xl);
+        --block-heading-font-weight: 600;
+
+        width: 100%;
+        padding-top: var(--block-space-t);
+        padding-bottom: var(--block-space-b);
+
+        &-inner {
+            max-width: var(--#{$siteName}_full-width);
+            padding-left: var(--block-space-v);
+            padding-right: var(--block-space-v);
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: content-box;
+
+            @include mediaQuery(m) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+
+        &-heading {
+            margin-bottom: 1rem;
+
+            & h1 {
+                font-size: var(--block-heading-font-size);
+                font-weight: var(--block-heading-font-weight);
+            }
+        }
+    }
+}

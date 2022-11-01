@@ -1,0 +1,50 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ list
+***********************/
+.#{$siteName} {
+    &_list {
+        &-row {
+            --list-gap: 2rem;
+            --list-basis: 40rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--list-gap);
+
+            &_auto {
+                flex-wrap: wrap;
+
+                > * {
+                    flex-grow: 1;
+                    flex-basis: calc((var(--list-basis) - 100%) * 999);
+                }
+            }
+
+            &_md {
+                @include mediaQuery(m) {
+                    flex-direction: column;
+                }
+
+                > * {
+                    flex: 1;
+
+                    @include mediaQuery(m) {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        &-col {
+            --list-gap: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: var(--list-gap);
+        }
+    }
+}

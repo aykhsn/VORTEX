@@ -1,0 +1,164 @@
+/**********************
+ Swiper
+***********************/
+.#{$siteName} {
+    &_swiper-card {
+        padding: 6.5rem 4rem;
+
+        @include mediaQuery(m) {
+            padding: 4rem 1rem;
+        }
+
+        & .swiper {
+            --card-w: 16rem;
+            --card-border-radius: 4px;
+            --slide-date-text-color: var(--#{$siteName}_sub-text-color);
+            --slide-title-text-color: var(--#{$siteName}_main-text-color);
+            --button-arrow-color: #dddddd;
+            --pagination-bullet-color: var(--#{$siteName}_link-color);
+            --box-shadow: .8rem .8rem 1.2rem rgba(0, 0, 0, .05), -.8rem -.8rem 1.2rem #ffffff;
+            --box-shadow-inset: inset .8rem .8rem 1.2rem rgba(0, 0, 0, .05), inset -.8rem -.8rem 1.2rem #ffffff;
+
+            height: fit-content;
+            overflow: visible;
+        }
+
+        /**********************
+         Controller
+        ***********************/
+        .swiper-controller {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 1rem;
+
+            @include mediaQuery(m) {
+                flex-wrap: wrap;
+            }
+        }
+
+        /**********************
+         Prev and Next Button 
+        ***********************/
+        .swiper-button-prev, .swiper-button-next {
+            display: grid;
+            position: relative;
+            flex-shrink: 0;
+            margin: 0;
+            place-content: center;
+            width: 4rem;
+            height: 4rem;
+            cursor: pointer;
+            transition: .8s cubic-bezier(.2, 1, .2, 1);
+        }
+
+        .swiper-button-prev::before, .swiper-button-next::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            border-radius: 50%;
+            box-shadow: var(--box-shadow);
+        }
+
+        .swiper-button-prev::after, .swiper-button-next::after {
+            width: 1.2rem;
+            height: 1.2rem;
+            content: "";
+            border: solid var(--button-arrow-color);
+            border-width: 3px 3px 0 0;
+        }
+
+        .swiper-button-prev::after {
+            margin-left: 0.4rem;
+            transform: rotate(-135deg);
+        }
+
+        .swiper-button-next::after {
+            margin-right: 0.4rem;
+            transform: rotate(45deg);
+        }
+
+        .swiper-button-disabled {
+            pointer-events: none;
+            opacity: 0.5;
+
+            &::before {
+                box-shadow: var(--box-shadow-inset);
+            }
+        }
+
+        /**********************
+         Pagination
+        ***********************/
+        .swiper-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 0.8rem;
+            justify-content: flex-start;
+            margin: 0 auto 0 0;
+            text-align: center;
+
+            @include mediaQuery(m) {
+                width: 100%;
+            }
+
+            &-bullet {
+                width: 1.6rem;
+                height: 3px;
+                cursor: pointer;
+                transition: .8s cubic-bezier(.2, 1, .2, 1);
+                vertical-align: top;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            &-bullet-active {
+                width: 4rem;
+                background-color: var(--pagination-bullet-color);
+            }
+        }
+
+
+        /**********************
+         Media and Title
+        ***********************/
+        .swiper-slide {
+            width: max-content;
+            transition: .8s cubic-bezier(.2, 1, .2, 1);
+
+            &:hover {
+                transform: translateY(-0.5rem);
+            }
+        }
+
+        .slide {
+            overflow: hidden;
+            width: var(--card-w);
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .slide-media {
+            padding-top: 50%;
+        }
+
+        .slide-content {
+            padding: 1rem;
+        }
+
+        .slide-date {
+            display: block;
+            font-size: 0.8rem;
+            line-height: 1;
+            color: var(--slide-date-text-color);
+        }
+
+        .slide-title {
+            margin-top: 1em;
+            color: var(--slide-title-text-color);
+        }
+    }
+}

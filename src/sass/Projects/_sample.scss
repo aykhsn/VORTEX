@@ -1,0 +1,25 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ sample
+***********************/
+.#{$siteName} {
+    &_footer {
+        & small {
+            font-size: var(--#{$siteName}_font-size-s);
+        }
+    }
+
+    &_cover {
+        & h1 {
+            font-size: var(--#{$siteName}_font-size-xxl);
+            font-weight: 600;
+        }
+    }
+
+    &_button {
+        &-wrapper {
+            margin-top: 4rem;
+        }
+    }
+}
