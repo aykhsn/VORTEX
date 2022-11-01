@@ -5,7 +5,7 @@ $siteName: 'vt';
 ***********************/
 @import "Setting/*";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,500&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
 
 /*@font-face {
 	font-family: '';
@@ -17,7 +17,7 @@ $siteName: 'vt';
 	--#{$siteName}_transition: all 0.4s ease-in-out;
 
 	/* Font */
-	--#{$siteName}_font-family: 'Montserrat', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+	--#{$siteName}_font-family: 'Nunito Sans', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
 	--#{$siteName}_font-ratio: 1.5;
 	--#{$siteName}_font-size-m: 1rem;
 	--#{$siteName}_font-size-s: calc(var(--#{$siteName}_font-size-m) / var(--#{$siteName}_font-ratio));
@@ -42,12 +42,12 @@ $siteName: 'vt';
 }
 
 html, body {
-	font-size: calc(1rem + 0.15vw);
-	letter-spacing: 0.02em;
+	font-size: calc(0.9rem + 0.15vw);
+	letter-spacing: 0.07em;
 	line-height: 1.5;
 	font-family: var(--#{$siteName}_font-family);
 	color: var(--#{$siteName}_main-text-color);
-	background-color: var(--#{$siteName}_header-color);
+	background-color: var(--#{$siteName}_bg-color);
 	scroll-behavior: smooth;
 }
 
