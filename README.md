@@ -1,3 +1,3 @@
-# Dinosaur
+# VORTEX
 
-This is a template for my projects.
+VORTEXのコーポレートサイトです。
