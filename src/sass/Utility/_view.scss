@@ -7,7 +7,7 @@
   &_sp--view {
     display: none;
 
-    @include mediaQuery(m) {
+    @include mediaQuery(s) {
       display: block;
     }
   }
@@ -15,7 +15,7 @@
   &_pc--view {
     display: block;
 
-    @include mediaQuery(m) {
+    @include mediaQuery(s) {
       display: none;
     }
   }

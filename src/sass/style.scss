@@ -14,7 +14,7 @@ $siteName: 'vt';
 
 :root {
 	--#{$siteName}_full-width: 90rem;
-	--#{$siteName}_transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+	--#{$siteName}_transition: all 0.4s ease;
 
 	/* Font */
 	--#{$siteName}_font-family: 'Nunito Sans', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
@@ -28,7 +28,7 @@ $siteName: 'vt';
 	/* Color */
 	--#{$siteName}_main-color: #CC4133;
 	--#{$siteName}_accent-color: #CC4133;
-	--#{$siteName}_sub-color: #CC4133;
+	--#{$siteName}_sub-color: #7C1623;
 
 	--#{$siteName}_main-text-color: #373737;
 	--#{$siteName}_sub-text-color: #373737;
@@ -52,8 +52,10 @@ html, body {
 }
 
 main {
+	position: relative;
 	margin-top: 4rem;
 	background-color: var(--#{$siteName}_bg-color);
+	z-index: 0;
 }
 
 img {
@@ -81,19 +83,17 @@ p {
 @import "Components/loading";
 @import "Components/header";
 @import "Components/footer";
-@import "Components/sideBar";
 @import "Components/cover";
 @import "Components/block";
-@import "Components/list";
+@import "Components/button";
+@import "Components/swiperCard";
+@import "Components/ellipsis";
+/*@import "Components/swiperCard";*/
+/*@import "Components/sideBar";*/
+/*@import "Components/list";
 @import "Components/card";
 @import "Components/frame";
-@import "Components/button";
-@import "Components/ellipsis";
-@import "Components/swiperCover";
-@import "Components/swiperCard";
-@import "Components/swiperCardSwitch";
-
-@import "Projects/sample";
+@import "Components/swiperCover";*/
 
 @import "Utility/font";
 @import "Utility/view";

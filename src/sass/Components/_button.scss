@@ -3,43 +3,70 @@
 ***********************/
 .#{$siteName} {
 	&_button {
-		--button-bg-color: #ffffff;
-		--button-text-color: #6e6ed3;
-		--button-border-color: #6e6ed3;
-		--button-border-size: 2px;
-		--button-font-size: 1.4rem;
-		--button-font-weight: 600;
-		--button-space-v: 0.5rem;
-		--button-space-h: 1rem;
+		--button-text-color: var(--#{$siteName}_main-text-color);
+		--button-icon-color: var(--#{$siteName}_main-color);
+		--button-font-size: 0.875rem;
 
 		display: inline-flex;
+		position: relative;
 		align-items: center;
 		justify-content: center;
-		padding: var(--button-space-v) var(--button-space-h);
-		min-width: 20ch;
 		color: var(--button-text-color);
 		background-color: var(--button-bg-color);
-		border: var(--button-border-size) solid var(--button-border-color);
-		transition: var(--#{$siteName}_transition);
+		cursor: pointer;
 
 		& * {
 			color: inherit;
 		}
 
 		& span {
+			margin-right: 5rem;
 			font-size: var(--button-font-size);
-			font-weight: var(--button-font-weight);
+			font-weight: 600;
+			font-family: var(--#{$siteName}_font-family);
+			line-height: 3.75rem;
+			letter-spacing: 0.07em;
+			transition: var(--#{$siteName}_transition);
+		}
+
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			height: 3.75rem;
+			width: 3.75rem;
+			border-radius: 50%;
+			background-color: var(--button-icon-color);
+			transition: var(--#{$siteName}_transition);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: calc((3.75rem - 0.7rem) / 2 );
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0.4rem 0 0.4rem 0.6rem;
+			border-color: transparent transparent transparent #ffffff;
+			transition: var(--#{$siteName}_transition);
 		}
 
 		&:hover {
-			color: var(--button-bg-color);
-			background-color: var(--button-text-color);
-		}
+			& span {
+				margin-left: 0.4rem;
+				margin-right: 4.6rem;
+			}
 
-		&-wrapper {
-			display: flex;
-			justify-content: center;
-			width: 100%;
+			&::before {
+				height: 3.5rem;
+				width: 3.5rem;
+			}
+
+			&::after {
+				right: calc((3.5rem - 0.9rem) / 2 );
+			}
 		}
 	}
 }
