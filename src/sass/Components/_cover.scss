@@ -15,7 +15,7 @@
 
         @include mediaQuery(m) {
             width: 100vw;
-            height: 80vh;
+            height: 66vh;
             max-height: 100vh;
         }
 
@@ -84,7 +84,12 @@
             }
 
             & > p {
+                width: 50%;
                 font-size: 0.9rem;
+
+                @include mediaQuery(s) {
+                    width: 100%;
+                }
             }
 
             & > :first-child:not(h1) {

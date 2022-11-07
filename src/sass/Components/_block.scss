@@ -5,36 +5,80 @@
 ***********************/
 .#{$siteName} {
     &_block {
-        --block-space-t: 4rem;
-        --block-space-b: 6.5rem;
-        --block-space-v: 4rem;
-        --block-heading-font-size: var(--#{$siteName}_font-size-xl);
-        --block-heading-font-weight: 600;
-
         width: 100%;
-        padding-top: var(--block-space-t);
-        padding-bottom: var(--block-space-b);
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        &+.#{$siteName} {
+            &_block {
+                padding-top: 0;
+            }
+        }
+
+        @include mediaQuery(s) {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
 
         &-inner {
             max-width: var(--#{$siteName}_full-width);
-            padding-left: var(--block-space-v);
-            padding-right: var(--block-space-v);
+            padding-left: 5rem;
+            padding-right: 5rem;
             margin-left: auto;
             margin-right: auto;
             box-sizing: content-box;
 
             @include mediaQuery(m) {
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
             }
         }
 
         &-heading {
-            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 3rem;
+
+            @include mediaQuery(m) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
 
             & h1 {
-                font-size: var(--block-heading-font-size);
-                font-weight: var(--block-heading-font-weight);
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                font-size: 1rem;
+                font-weight: 600;
+                letter-spacing: 0.08em;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 1rem;
+                    height: calc(1rem * 20 / 18);
+                    background-size: cover;
+                    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2218%22%20height%3D%2220%22%20viewBox%3D%220%200%2018%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M9%20-4.09687e-05L0%209.99817H18L9%20-4.09687e-05Z%22%20fill%3D%22%23CC4133%22%2F%3E%0A%3Cpath%20d%3D%22M9%2020L0%209.99821H18L9%2020Z%22%20fill%3D%22%237C1623%22%2F%3E%0A%3C%2Fsvg%3E');
+                }
+            }
+
+        }
+
+        & h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+        }
+
+        &--gray {
+            background-color: var(--#{$siteName}_sub-bg-color);
+
+            &+.#{$siteName} {
+                &_block {
+                    padding-top: 6rem;
+                }
             }
         }
     }

@@ -7,11 +7,6 @@ $siteName: 'vt';
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
 
-/*@font-face {
-	font-family: '';
-	src: url('') format('svg');
-}*/
-
 :root {
 	--#{$siteName}_full-width: 90rem;
 	--#{$siteName}_transition: all 0.4s ease;
@@ -42,7 +37,7 @@ $siteName: 'vt';
 }
 
 html, body {
-	font-size: calc(0.9rem + 0.15vw);
+	font-size: calc(0.9rem + 0.1vw);
 	letter-spacing: 0.07em;
 	line-height: 1.5;
 	font-family: var(--#{$siteName}_font-family);
@@ -64,6 +59,7 @@ img {
 
 p {
 	line-height: 2;
+	font-family: 'Noto Sans JP', sans-serif;
 
 	@include mediaQuery(m) {
 		line-height: 1.7;
@@ -86,12 +82,12 @@ p {
 @import "Components/cover";
 @import "Components/block";
 @import "Components/button";
-@import "Components/swiperCard";
 @import "Components/ellipsis";
-/*@import "Components/swiperCard";*/
+@import "Components/card";
+@import "Components/swiperCard";
+@import "Components/swiperCardSwitch";
 /*@import "Components/sideBar";*/
 /*@import "Components/list";
-@import "Components/card";
 @import "Components/frame";
 @import "Components/swiperCover";*/
 

@@ -29,6 +29,15 @@
 			transition: var(--#{$siteName}_transition);
 		}
 
+		&-wrapper {
+			margin-top: 2.5rem;
+
+			&--right {
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+
 
 		&::before {
 			content: "";

@@ -4,44 +4,20 @@
 .#{$siteName} {
     &_card {
         &-row {
-            --card-gap: 1rem;
+            --card-gap: 2rem;
 
             display: flex;
             align-items: stretch;
             justify-content: center;
             gap: var(--card-gap);
 
-            &_half {
-                --card-basis: 50rem;
-                flex-wrap: wrap;
-
-                > * {
-                    flex-grow: 1;
-                    flex-basis: calc((var(--card-basis) - 100%) * 999);
-                }
+            @include mediaQuery(s) {
+                flex-direction: column;
             }
 
-            &_sideBar {
-                --card-basis: 20rem;
-
-                display: flex;
-                flex-wrap: wrap;
-                align-items: stretch;
-                gap: 1rem;
-
-                & > :first-child {
-                    flex-basis: var(--card-basis);
-                    flex-grow: 1;
-                }
-
-                & > :last-child {
-                    flex-basis: 0;
-                    flex-grow: 999;
-                    min-width: 50%;
-                }
-
-                &--reverse {
-                    flex-direction: row-reverse;
+            &_half {
+                > * {
+                    flex: 1;
                 }
             }
         }
