@@ -9,12 +9,6 @@
         padding-top: 6rem;
         padding-bottom: 6rem;
 
-        &+.#{$siteName} {
-            &_block {
-                padding-top: 0;
-            }
-        }
-
         @include mediaQuery(s) {
             padding-top: 8rem;
             padding-bottom: 8rem;
@@ -53,6 +47,7 @@
                 font-size: 1rem;
                 font-weight: 600;
                 letter-spacing: 0.08em;
+                white-space: nowrap;
 
                 &::before {
                     content: "";
@@ -61,6 +56,14 @@
                     height: calc(1rem * 20 / 18);
                     background-size: cover;
                     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2218%22%20height%3D%2220%22%20viewBox%3D%220%200%2018%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M9%20-4.09687e-05L0%209.99817H18L9%20-4.09687e-05Z%22%20fill%3D%22%23CC4133%22%2F%3E%0A%3Cpath%20d%3D%22M9%2020L0%209.99821H18L9%2020Z%22%20fill%3D%22%237C1623%22%2F%3E%0A%3C%2Fsvg%3E');
+                }
+            }
+
+            & p {
+                font-size: 0.9rem;
+
+                @include mediaQuery(m) {
+                    font-size: 1rem;
                 }
             }
 
@@ -74,12 +77,6 @@
 
         &--gray {
             background-color: var(--#{$siteName}_sub-bg-color);
-
-            &+.#{$siteName} {
-                &_block {
-                    padding-top: 6rem;
-                }
-            }
         }
     }
 }

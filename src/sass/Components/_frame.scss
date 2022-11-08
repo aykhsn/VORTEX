@@ -3,12 +3,12 @@
 ***********************/
 .#{$siteName} {
     &_frame {
-        --frame-h: 9;
-        --frame-w: 16;
+        --frame-h: 3;
+        --frame-w: 4;
 
     	position: relative;
     	width: 100%;
-    	padding-bottom: calc(var(--frame-h) / var(--frame-w) * 100%);
+    	padding-bottom: 60%;
 
     	& > * {
     		position: absolute;

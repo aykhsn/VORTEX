@@ -7,7 +7,7 @@
     &_ellipsis {
         --font-size-base: 0.875rem;
         --line-height-computed: 2;
-        --lines-to-show: 2;
+        --lines-to-show: 3;
 
         @include mediaQuery(m) {
             --line-height-computed: 1.7;
