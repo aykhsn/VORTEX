@@ -12,6 +12,14 @@
     }
   }
 
+  &_tb--view {
+    display: none;
+
+    @include mediaQuery(m) {
+      display: block;
+    }
+  }
+
   &_pc--view {
     display: block;
 
