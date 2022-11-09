@@ -1,0 +1,16 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ service
+***********************/
+.#{$siteName} {
+    &_service {
+    	& .#{$siteName}_card-row {
+    		margin: 0 5%;
+
+    		@include mediaQuery(s) {
+    			margin: 0;
+    		}
+    	}
+    }
+}

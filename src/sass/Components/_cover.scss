@@ -16,7 +16,7 @@
 
         @include mediaQuery(m) {
             width: 100vw;
-            height: 66vh;
+            height: 80vh;
             max-height: 100vh;
         }
 
@@ -55,6 +55,7 @@
             height: 100%;
             width: 100%;
             color: var(--cover-text-color);
+            mix-blend-mode: multiply;
             z-index: 100;
             animation-delay: 0.2s;
 
@@ -63,7 +64,7 @@
             }
 
             @include mediaQuery(s) {
-                padding: 45vw 2rem;
+                padding: 35vw 2rem;
             }
 
             & > * {
@@ -80,7 +81,6 @@
 
                 @include mediaQuery(s) {
                     margin: unset;
-                    font-size: 2rem;
                 }
             }
 
@@ -89,7 +89,7 @@
                 font-size: 0.9rem;
 
                 @include mediaQuery(s) {
-                    width: 100%;
+                    width: 80%;
                 }
             }
 
