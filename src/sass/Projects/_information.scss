@@ -6,5 +6,47 @@
 .#{$siteName} {
     &_information {
     	background-color: #ffffff;
+
+    	& ul {
+    		& li {
+	    		border-top: 1px solid #dce0e1;
+
+	    		&:last-child {
+		    		border-bottom: 1px solid #dce0e1;
+	    		}
+    		}
+
+	    	& a {
+	    		display: block;
+	    		padding: 1.5rem 0;
+	    		color: var(--#{$siteName}_main-text-color);
+
+	    		&:hover {
+	    			& p {
+		    			text-decoration: underline;
+	    			}
+	    		}
+
+	    		& > * + * {
+	    			margin-top: 0.5em;
+	    		}
+	    	}
+
+	    	& time {
+	    		font-size: 0.8rem;
+	    	}
+
+	    	& span {
+	    		margin-left: 1em;
+	    		padding: 0.2em 0.5em;
+	    		font-size: 0.8rem;
+	    		font-weight: 600;
+	    		background-color: var(--#{$siteName}_sub-bg-color);
+	    	}
+
+	    	& p {
+	    		font-size: 1.1rem;
+	    	}
+    	}
     }
 }
