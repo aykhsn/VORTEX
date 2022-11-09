@@ -3,6 +3,7 @@
 <%- include( 'Components/_head' ); %>
 <body>
 <div class="<%= siteName %>_wrapper">
+	<div class="<%= siteName %>_bg"></div>
 <%- include( 'Components/_header', { siteName:siteName } ); %>
 <main>
 <%- include( 'Components/_mv', { siteName:siteName } ); %>
@@ -28,7 +29,7 @@
 	<div class="<%= siteName %>_block-inner">
 		<div class="<%= siteName %>_block-heading">
 			<h1>Project</h1>
-			<p>最新の案件情報をお知らせします</p>
+			<p>最新の案件情報をお知らせします。</p>
 		</div>
 	    <div id="mySwiperCardSwitch" class="swiper">
 	        <div class="swiper-wrapper">
@@ -103,7 +104,7 @@
 		</div>
 	</div>
 </section>
-<section class="<%= siteName %>_block <%= siteName %>_block--gray <%= siteName %>_recruit">
+<section class="<%= siteName %>_block <%= siteName %>_recruit <%= siteName %>_block--blur">
 	<div class="<%= siteName %>_block-inner">
 		<div class="<%= siteName %>_block-heading">
 			<h1>Recruit</h1>
@@ -121,8 +122,17 @@
 	<div class="<%= siteName %>_block-inner">
 		<div class="<%= siteName %>_block-heading">
 			<h1>Information</h1>
-			<p>最新情報をお知らせします</p>
+			<p>最新情報をお知らせします。</p>
 		</div>
+		<ul>
+			<% for (var i = 0; i < 3; i++) { %>
+			<li>
+				<a>
+					
+				</a>
+			</li>
+			<% } %>
+		</ul>
 	</div>
 </section>
 </main>

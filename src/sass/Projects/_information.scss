@@ -1,0 +1,10 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ information
+***********************/
+.#{$siteName} {
+    &_information {
+    	background-color: #ffffff;
+    }
+}

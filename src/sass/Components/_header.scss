@@ -23,7 +23,7 @@
 		mix-blend-mode: multiply;
 		z-index: 100;
 
-		@include mediaQuery(m) {
+		@include mediaQuery(s) {
 			mix-blend-mode: normal;
 		}
 
@@ -42,7 +42,7 @@
 		}
 
 		& nav {
-			@include mediaQuery(m) {
+			@include mediaQuery(s) {
 				position: fixed;
 				opacity: 0;
 				top: 0;
@@ -57,34 +57,44 @@
 
 			& ul {
 				display: flex;
-				flex-wrap: wrap;
 				align-items: center;
 				justify-content: flex-end;
+				gap: 0.2em;
 
-				@include mediaQuery(m) {
-					display: flex;
+				@include mediaQuery(s) {
 					flex-direction: column;
 					justify-content: center;
-					gap: 1.6rem;
-					padding-bottom: 4rem;
+					gap: 4vh;
+					padding: 0 4rem 4rem;
 					width: 100%;
 					height: 100%;
+				}
+
+				& li {
+					@include mediaQuery(s) {
+						text-align: center;
+					}
 				}
 				
 				& a {
 					display: inline-block;
-					padding-left: 1rem;
-					padding-right: 1rem;
+					padding-left: 1em;
+					padding-right: 1em;
 					font-size: 0.875rem;
 					font-weight: 600;
+					letter-spacing: 0.08em;
 					animation-name: fadeIn;
 					animation-duration: 1.4s;
 					animation-delay: 0.4s;
 					animation-timing-function: ease-in-out;
 					animation-fill-mode: forwards;
+					background: linear-gradient(var(--#{$siteName}_main-text-color) 0 0) left /var(--d, 0%) 100% no-repeat;
 					opacity: 0;
+					transition: var(--#{$siteName}_transition);
 
 					@include mediaQuery(m) {
+						padding-left: 0.5em;
+						padding-right: 0.5em;
 						animation: none;
 						opacity: 1;
 					}
@@ -92,6 +102,11 @@
 					@include mediaQuery(s) {
 						font-size: 1.4rem;
 						font-weight: 500;
+					}
+
+					&:hover {
+						--d: 100%;
+						color: #ffffff;
 					}
 				}
 			}
@@ -113,7 +128,7 @@
 		z-index: 102;
 		transition: var(--#{$siteName}_transition);
 
-		@include mediaQuery(m) {
+		@include mediaQuery(s) {
 			display: inline-block;
 		}
 

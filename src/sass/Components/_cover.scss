@@ -12,6 +12,7 @@
         width: 100vw;
         height: 100vh;
         margin-top: -4rem;
+        background-color: #ffffff;
 
         @include mediaQuery(m) {
             width: 100vw;

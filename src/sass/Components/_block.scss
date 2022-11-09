@@ -78,5 +78,9 @@
         &--gray {
             background-color: var(--#{$siteName}_sub-bg-color);
         }
+
+        &--blur {
+            backdrop-filter: blur(4px);
+        }
     }
 }

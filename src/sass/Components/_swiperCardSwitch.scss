@@ -4,6 +4,7 @@
 .#{$siteName} {
     &_swiper-card-switch {
         overflow: hidden;
+        background-color: #ffffff;
 
         & .swiper {
             --slide-date-text-color: var(--#{$siteName}_main-text-color);
