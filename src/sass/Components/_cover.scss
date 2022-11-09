@@ -57,7 +57,7 @@
             color: var(--cover-text-color);
             mix-blend-mode: multiply;
             z-index: 100;
-            animation-delay: 0.2s;
+            animation-delay: 0.3s;
 
             @include mediaQuery(m) {
                 padding: 20vh 2rem 25vh;

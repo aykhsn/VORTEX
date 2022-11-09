@@ -15,13 +15,8 @@
 		width: 100vw;
 		height: 100vh;
 		background-color: var(--loading-bg-color);
-		z-index: 100;
+		z-index: 1000;
 		transition: var(--#{$siteName}_transition);
-
-		&-icon {
-			width: var(--loading-icon-w);
-			height: auto;
-		}
 
 		&.loaded {
 			opacity: 0;
