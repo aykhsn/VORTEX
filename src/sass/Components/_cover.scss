@@ -68,11 +68,11 @@
             animation-delay: 0.3s;
 
             @include mediaQuery(m) {
-                padding: 20vh 2rem 25vh;
+                padding: 20vh 3rem 25vh;
             }
 
             @include mediaQuery(s) {
-                padding: 35vw 2rem;
+                padding: 35vw 1.5rem;
             }
 
             & > * {

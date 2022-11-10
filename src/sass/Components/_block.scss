@@ -23,8 +23,13 @@
             box-sizing: content-box;
 
             @include mediaQuery(m) {
-                padding-left: 2rem;
-                padding-right: 2rem;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
+            @include mediaQuery(s) {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
         }
 
