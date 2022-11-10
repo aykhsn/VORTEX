@@ -6,17 +6,73 @@
 		--footer-bg-color: var(--#{$siteName}_main-color);
         --footer-text-color: #ffffff;
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
 		color: var(--footer-text-color);
 		background-color: var(--footer-bg-color);
 
+		&.#{$siteName}_block {
+			@include mediaQuery(s) {
+				padding-top: 3rem;
+			    padding-bottom: 3rem;
+			}
+		}
+
 		& * {
 			color: inherit;
+		}
+
+		&-logo {
+			margin-bottom: 3rem;
+
+			@include mediaQuery(s) {
+				margin-bottom: 4rem;
+			}
+
+			& img {
+				height: 3rem;
+			}
+		}
+
+		& ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem 2rem;
+
+			& li {
+				& a {
+					&:hover {
+		    			text-decoration: underline;
+		    		}
+				}
+			}
+		}
+
+		&-pages {
+			margin-bottom: 3rem;
+
+			& a {
+				font-size: 1.1rem;
+			}
+		}
+
+		&-other {
+			margin-bottom: 1rem;
+
+			& a {
+				font-size: 0.8rem;	
+			}
+		}
+
+		&-icons {
+			& img {
+				height: 2rem;
+			}
+		}
+
+		& small {
+			display: block;
+		    margin-top: -1.5em;
+			font-size: 0.6rem;
+		    text-align: right;
 		}
 	}
 }
