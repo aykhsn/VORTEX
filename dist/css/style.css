@@ -1065,6 +1065,9 @@ a {
   overflow: hidden;
   background-color: #ffffff;
   /**********************
+   Prev and Next Button 
+  ***********************/
+  /**********************
    Swiper initialized
   ***********************/
   /**********************
@@ -1080,6 +1083,71 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   overflow: visible;
+}
+@media screen and (max-width: 1024px) {
+  .vt_swiper-card-switch .swiper {
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .vt_swiper-card-switch .swiper {
+    padding: 0 1rem;
+  }
+}
+.vt_swiper-card-switch .swiper-button-prev, .vt_swiper-card-switch .swiper-button-next {
+  position: absolute;
+  display: grid;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  place-content: center;
+  -webkit-transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  z-index: 1;
+}
+@media screen and (max-width: 420px) {
+  .vt_swiper-card-switch .swiper-button-prev, .vt_swiper-card-switch .swiper-button-next {
+    display: none;
+  }
+}
+.vt_swiper-card-switch .swiper-button-prev {
+  left: -0.5rem;
+}
+.vt_swiper-card-switch .swiper-button-next {
+  left: calc(100% - 1rem);
+}
+.vt_swiper-card-switch .swiper-button-prev::before, .vt_swiper-card-switch .swiper-button-next::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+.vt_swiper-card-switch .swiper-button-prev::after, .vt_swiper-card-switch .swiper-button-next::after {
+  width: 1.2rem;
+  height: 1.2rem;
+  content: "";
+  border: solid #373737;
+  border-width: 3px 3px 0 0;
+  border-color: #373737;
+}
+.vt_swiper-card-switch .swiper-button-prev::after {
+  margin-left: 0.4rem;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.vt_swiper-card-switch .swiper-button-next::after {
+  margin-right: 0.4rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.vt_swiper-card-switch .swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0;
 }
 .vt_swiper-card-switch .swiper:not(.swiper-initialized) {
   padding: 0;
