@@ -212,6 +212,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .vt_header {
+    height: 5rem;
     mix-blend-mode: normal;
   }
 }
@@ -224,11 +225,6 @@ a {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-}
-@media screen and (max-width: 640px) {
-  .vt_header img {
-    height: 2.4rem;
-  }
 }
 @media screen and (max-width: 640px) {
   .vt_header nav {
@@ -341,6 +337,8 @@ a {
 @media screen and (max-width: 640px) {
   .vt_menu {
     display: inline-block;
+    width: 24px;
+    height: 20px;
   }
 }
 .vt_menu span {
@@ -360,6 +358,11 @@ a {
 }
 .vt_menu span:nth-of-type(2) {
   top: 7px;
+}
+@media screen and (max-width: 640px) {
+  .vt_menu span:nth-of-type(2) {
+    top: 9px;
+  }
 }
 .vt_menu span:nth-of-type(2)::after {
   position: absolute;
