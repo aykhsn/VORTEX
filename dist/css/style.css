@@ -573,7 +573,7 @@ a {
 @media screen and (max-width: 640px) {
   .vt_cover-inner > h1 {
     margin: unset;
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 }
 .vt_cover-inner > p {
@@ -647,7 +647,6 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 4rem;
   }
 }
 .vt_block-heading h1 {
