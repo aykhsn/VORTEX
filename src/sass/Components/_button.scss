@@ -5,7 +5,7 @@
 	&_button {
 		--button-text-color: var(--#{$siteName}_main-text-color);
 		--button-icon-color: var(--#{$siteName}_main-color);
-		--button-font-size: 0.875rem;
+		--button-font-size: 0.9rem;
 
 		display: inline-flex;
 		position: relative;
@@ -53,11 +53,11 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: calc((3.75rem - 0.7rem) / 2 );
+			right: calc((3.75rem - 0.9rem) / 2 );
 			width: 0;
 			height: 0;
 			border-style: solid;
-			border-width: 0.4rem 0 0.4rem 0.6rem;
+			border-width: 0.55rem 0 0.55rem 0.75rem;
 			border-color: transparent transparent transparent #ffffff;
 			transition: var(--#{$siteName}_transition);
 		}
@@ -74,7 +74,7 @@
 			}
 
 			&::after {
-				right: calc((3.5rem - 0.9rem) / 2 );
+				right: calc((3.4rem - 0.9rem) / 2 );
 			}
 		}
 	}

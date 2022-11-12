@@ -4,6 +4,7 @@
 <body>
 <div class="<%= siteName %>_wrapper">
 <%- include( 'Components/_header', { siteName:siteName } ); %>
+
 <%- include( 'Components/_loading', { siteName:siteName } ); %>
 <main>
 <%- include( 'Components/_mv', { siteName:siteName } ); %>
@@ -106,7 +107,7 @@
 		</div>
 	</div>
 </section>
-<section class="<%= siteName %>_block <%= siteName %>_recruit <%= siteName %>_block--blur">
+<section class="<%= siteName %>_block <%= siteName %>_recruit <%= siteName %>_block--bg">
 	<div class="<%= siteName %>_block-inner">
 		<div class="<%= siteName %>_block-heading">
 			<h1>Recruit</h1>
