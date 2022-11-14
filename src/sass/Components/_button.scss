@@ -5,7 +5,6 @@
 	&_button {
 		--button-text-color: var(--#{$siteName}_main-text-color);
 		--button-icon-color: var(--#{$siteName}_main-color);
-		--button-font-size: 0.9rem;
 
 		display: inline-flex;
 		position: relative;
@@ -21,12 +20,16 @@
 
 		& span {
 			margin-right: 5rem;
-			font-size: var(--button-font-size);
+			font-size: 0.9rem;
 			font-weight: 600;
 			font-family: var(--#{$siteName}_font-family);
 			line-height: 3.75rem;
 			letter-spacing: 0.07em;
 			transition: var(--#{$siteName}_transition);
+
+			@include mediaQuery(s) {
+				font-size: 1rem;
+			}
 		}
 
 		&-wrapper {

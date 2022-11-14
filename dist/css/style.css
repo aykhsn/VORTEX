@@ -665,6 +665,11 @@ a {
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
+@media screen and (max-width: 640px) {
+  .vt_block-heading h1 {
+    font-size: 1.2rem;
+  }
+}
 .vt_block-heading h1::before {
   content: "";
   display: inline-block;
@@ -708,7 +713,6 @@ a {
 .vt_button {
   --button-text-color: var(--vt_main-text-color);
   --button-icon-color: var(--vt_main-color);
-  --button-font-size: 0.9rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -728,13 +732,18 @@ a {
 }
 .vt_button span {
   margin-right: 5rem;
-  font-size: var(--button-font-size);
+  font-size: 0.9rem;
   font-weight: 600;
   font-family: var(--vt_font-family);
   line-height: 3.75rem;
   letter-spacing: 0.07em;
   -webkit-transition: var(--vt_transition);
   transition: var(--vt_transition);
+}
+@media screen and (max-width: 640px) {
+  .vt_button span {
+    font-size: 1rem;
+  }
 }
 .vt_button-wrapper {
   margin-top: 2.5rem;
@@ -1227,6 +1236,50 @@ a {
 /**********************
  service
 ***********************/
+.vt_service {
+  position: relative;
+  overflow: hidden;
+}
+.vt_service::before {
+  position: absolute;
+  top: 0;
+  right: -30%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--vt_sub-bg-color);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 25%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 25%);
+  z-index: 0;
+}
+@media screen and (max-width: 640px) {
+  .vt_service::before {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 50%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 50%);
+  }
+}
+.vt_service::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--vt_sub-bg-color);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 100%);
+  z-index: 0;
+}
+@media screen and (max-width: 640px) {
+  .vt_service::after {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
+  }
+}
+.vt_service .vt_block-inner {
+  position: relative;
+  z-index: 100;
+}
 .vt_service .vt_card-row {
   margin: 0 5%;
 }
