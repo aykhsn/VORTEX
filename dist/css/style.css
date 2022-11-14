@@ -1241,6 +1241,7 @@ a {
   overflow: hidden;
 }
 .vt_service::before {
+  display: block;
   position: absolute;
   top: 0;
   right: -30%;
@@ -1259,6 +1260,7 @@ a {
   }
 }
 .vt_service::after {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
