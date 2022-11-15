@@ -1,2 +1,5 @@
 .git
 node_modules
+wp/wp-content/languages
+wp/wp-content/plugins
+wp/wp-content/upgrade
