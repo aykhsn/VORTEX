@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> <?php blankslate_schema_type(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<head prefix="og:http://ogp.me/ns#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/dist/css/style.css">
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/favicon.ico">
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/dist/assets/android-chrome-192x192.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+<title>VORTEX</title>
+<meta name="description" content="VORTEX | 関わる人の「もっと」を応援する">
+<meta name="keywords" content="VORTEX, SES, システムエンジニアリングサービス">
+<!-- OGP -->
+<meta property="og:title" content="VORTEX | 関わる人の「もっと」を応援する">
+<meta property="og:description" content="システムエンジニアリングサービスを提供しています。">
+<meta property="og:url" content="">
+<meta property="og:image" content=""><!-- 絶対値で指定 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VORTEX">
+<meta property="og:locale" content="ja_JP">
+<!-- Swiper -->
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/swiper.min.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/swiper-bundle.min.css">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="wrapper" class="hfeed">
-<header id="header" role="banner">
-<div id="branding">
-<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-<?php
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
-echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
-if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; }
-?>
-</div>
-<div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
-</div>
-<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
-<div id="search"><?php get_search_form(); ?></div>
-</nav>
+<div class="vt_wrapper">
+<header class="vt_header">
+	<a href="">
+		<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/logo.svg">
+	</a>
+	<nav class="js-menu">
+		<ul>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Service</a>
+			</li>
+			<li>
+				<a href="">Project</a>
+			</li>
+			<li>
+				<a href="">Recruit</a>
+			</li>
+			<li>
+				<a href="">Information</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+		</ul>
+	</nav>
+	<button class="js-menu_toggler vt_menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 </header>
-<div id="container">
-<main id="content" role="main">
+<div id="loading" class="vt_loading"></div>
+<main>
