@@ -72,7 +72,7 @@
             }
 
             @include mediaQuery(s) {
-                padding: 40vw 1.5rem;
+                padding: 48vw 1.5rem;
             }
 
             & > * {
@@ -89,7 +89,7 @@
 
                 @include mediaQuery(s) {
                     margin: unset;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                 }
             }
 
