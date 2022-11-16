@@ -9,31 +9,27 @@
 		animation-fill-mode: forwards;
 		opacity: 0;
 
-		&--2d {
-			animation-duration: 2.8s;
-		}
-
-		&--1d {
-			animation-duration: 1.4s;
+		&--slow {
+			animation-duration: 1.2s;
 		}
 
 		&--1 {
-			animation-delay: 3.4s;
+			animation-delay: 1.8s;
 		}
 
 		&--2 {
-			animation-delay: 4s;
+			animation-delay: 1.9s;
 		}
 
 		&--3 {
-			animation-delay: 4.6s;
+			animation-delay: 2.0s;
 		}
 	}
 
     .reveal-text,
     .reveal-text::after {
       animation-iteration-count: 1;
-      animation-duration: 1s;
+      animation-duration: 0.8s;
       animation-fill-mode: both;
       animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
     }
@@ -45,7 +41,7 @@
 
     .reveal-text:last-child,
     .reveal-text:last-child::after {
-        animation-delay: 2.2s;
+        animation-delay: 1.2s;
     }
 
     .reveal-text {

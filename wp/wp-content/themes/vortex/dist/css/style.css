@@ -559,7 +559,7 @@ a {
 }
 @media screen and (max-width: 640px) {
   .vt_cover-inner {
-    padding: 40vw 1.5rem;
+    padding: 48vw 1.5rem;
   }
 }
 .vt_cover-inner > * {
@@ -576,7 +576,7 @@ a {
 @media screen and (max-width: 640px) {
   .vt_cover-inner > h1 {
     margin: unset;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .vt_cover-inner > p {
@@ -1604,16 +1604,83 @@ a {
 /**********************
  Animation - Fade
 ***********************/
-.vt_fadeIn {
+.loaded .fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 1.4s;
-          animation-duration: 1.4s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+}
+.loaded .fadeIn--2d {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.loaded .fadeIn--1d {
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+}
+.loaded .fadeIn--1 {
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
+}
+.loaded .fadeIn--2 {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
+}
+.loaded .fadeIn--3 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.loaded .reveal-text,
+.loaded .reveal-text::after {
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.loaded .reveal-text:nth-child(1),
+.loaded .reveal-text:nth-child(1)::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.loaded .reveal-text:last-child,
+.loaded .reveal-text:last-child::after {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.loaded .reveal-text {
+  position: relative;
+  -webkit-animation-name: clip-text;
+          animation-name: clip-text;
+  white-space: nowrap;
+  cursor: default;
+}
+.loaded .reveal-text::after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #373737;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  pointer-events: none;
+  -webkit-animation-name: text-revealer;
+          animation-name: text-revealer;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1625,5 +1692,61 @@ a {
 @keyframes fadeIn {
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes clip-text {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes clip-text {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+@-webkit-keyframes text-revealer {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+  }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+  60% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+@keyframes text-revealer {
+  0%, 50% {
+    -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+  }
+  60%, 100% {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+  60% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
 }

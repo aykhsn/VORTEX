@@ -1,11 +1,12 @@
 <?php get_header(); ?>
+
 <section class="vt_cover">
-	<div class="vt_cover-inner vt_fadeIn">
-		<h1>関わる人の<br>「もっと」を<br class="vt_sp--view">応援する</h1>
-		<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-		<a href="" class="vt_button"><span>View More</span></a>
+	<div class="vt_cover-inner">
+		<h1><span class="reveal-text">関わる人の</span><br><span class="reveal-text">「もっと」を応援する</span></h1>
+		<p class="fadeIn fadeIn--1">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+		<a href="" class="vt_button fadeIn fadeIn--2"><span>View More</span></a>
 	</div>
-	<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/background.svg" class="js-textAnimation vt_fadeIn">
+	<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/background.svg" class="js-textAnimation fadeIn fadeIn--1 fadeIn--2d">
 </section>
 <section class="vt_block vt_service">
 	<div class="vt_block-inner">
@@ -254,4 +255,5 @@
 	mediaQuery.addListener(checkBreakpoint);
 	checkBreakpoint(mediaQuery);
 </script>
+
 <?php get_footer(); ?>

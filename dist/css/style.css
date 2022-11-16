@@ -1615,32 +1615,28 @@ a {
           animation-fill-mode: forwards;
   opacity: 0;
 }
-.loaded .fadeIn--2d {
-  -webkit-animation-duration: 2.8s;
-          animation-duration: 2.8s;
-}
-.loaded .fadeIn--1d {
-  -webkit-animation-duration: 1.4s;
-          animation-duration: 1.4s;
+.loaded .fadeIn--slow {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 .loaded .fadeIn--1 {
-  -webkit-animation-delay: 3.4s;
-          animation-delay: 3.4s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 .loaded .fadeIn--2 {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 .loaded .fadeIn--3 {
-  -webkit-animation-delay: 4.6s;
-          animation-delay: 4.6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .loaded .reveal-text,
 .loaded .reveal-text::after {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -1653,8 +1649,8 @@ a {
 }
 .loaded .reveal-text:last-child,
 .loaded .reveal-text:last-child::after {
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 .loaded .reveal-text {
   position: relative;
