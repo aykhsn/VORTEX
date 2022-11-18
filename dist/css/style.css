@@ -570,7 +570,7 @@ a {
 @media screen and (max-width: 640px) {
   .vt_cover-inner > h1 {
     margin: unset;
-    font-size: 2rem;
+    font-size: calc(0.1rem + 8vw);
   }
 }
 .vt_cover-inner > p {

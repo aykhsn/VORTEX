@@ -90,7 +90,7 @@
 
                 @include mediaQuery(s) {
                     margin: unset;
-                    font-size: 2rem;
+                    font-size: calc(0.1rem + 8vw);
                 }
             }
 
