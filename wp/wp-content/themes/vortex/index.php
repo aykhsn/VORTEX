@@ -4,9 +4,9 @@
 	<div class="vt_cover-inner">
 		<h1><span class="reveal-text">関わる人の</span><br><span class="reveal-text">「もっと」を応援する</span></h1>
 		<p class="fadeIn fadeIn--1">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-		<a href="" class="vt_button fadeIn fadeIn--2"><span>View More</span></a>
+		<a href="" class="vt_button fadeIn fadeIn--1"><span>View More</span></a>
 	</div>
-	<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/background.svg" class="js-textAnimation fadeIn fadeIn--1 fadeIn--2d">
+	<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/background.svg" class="js-textAnimation fadeIn fadeIn--3 fadeIn--2d">
 </section>
 <section class="vt_block vt_service">
 	<div class="vt_block-inner">

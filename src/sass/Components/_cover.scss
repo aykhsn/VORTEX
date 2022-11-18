@@ -86,6 +86,7 @@
                 margin-bottom: auto;
                 font-size: 3rem;
                 font-weight: 600;
+                line-height: 1.7;
 
                 @include mediaQuery(s) {
                     margin: unset;

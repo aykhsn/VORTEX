@@ -28,10 +28,10 @@
 <div class="vt_wrapper">
 <header class="vt_header">
 	<a href="">
-		<img class="fadeIn fadeIn--1d fadeIn--3" src="<?php echo get_template_directory_uri(); ?>/dist/assets/logo.svg">
+		<img class="fadeIn fadeIn--1" src="<?php echo get_template_directory_uri(); ?>/dist/assets/logo.svg">
 	</a>
 	<nav class="js-menu">
-		<ul class="fadeIn fadeIn--1d fadeIn--3">
+		<ul class="fadeIn fadeIn--1d fadeIn--2">
 			<li>
 				<a href="">About</a>
 			</li>
@@ -52,7 +52,7 @@
 			</li>
 		</ul>
 	</nav>
-	<button class="js-menu_toggler vt_menu fadeIn fadeIn--1d fadeIn--3">
+	<button class="js-menu_toggler vt_menu fadeIn fadeIn--1d fadeIn--2">
 		<span></span>
 		<span></span>
 		<span></span>
