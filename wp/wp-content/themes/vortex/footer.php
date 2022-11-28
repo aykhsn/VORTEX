@@ -21,12 +21,12 @@
 				<a href="">Information</a>
 			</li>
 			<li>
-				<a href="">Contact</a>
+				<a href="<?php bloginfo('url'); ?>/contact">Contact</a>
 			</li>
 		</ul>
 		<ul class="vt_footer-other">
 			<li>
-				<a href="">個人情報保護方針</a>
+				<a href="<?php bloginfo('url'); ?>/privacy-policy">個人情報保護方針</a>
 			</li>
 		</ul>
 		<ul class="vt_footer-icons">

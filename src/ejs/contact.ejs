@@ -1,0 +1,32 @@
+<% var siteName = 'vt'; %>
+<html lang="ja">
+<%- include( 'Components/_head' ); %>
+<body>
+<div class="<%= siteName %>_wrapper">
+<%- include( 'Components/_header', { siteName:siteName } ); %>
+<main>
+	<section class="<%= siteName %>_page">
+		<div class="<%= siteName %>_page-heading <%= siteName %>_block--bg">
+			<div class="<%= siteName %>_block-inner">
+				<h1>Contact</h1>
+				<p>お問い合わせ</p>
+			</div>
+		</div>
+		<div class="<%= siteName %>_page-content">
+			<div class="<%= siteName %>_block-inner <%= siteName %>_block-inner--s">
+				
+			</div>
+		</div>
+	</section>
+</main>
+<%- include( 'Components/_footer', { siteName:siteName } ); %>
+</div>
+
+<!-- Smooth Scroll -->
+<script src="dist/js/smoothscroll.min.js"></script>
+
+<!-- Hamburger -->
+<script src="dist/js/slideMenu.min.js"></script>
+
+</body>
+</html>

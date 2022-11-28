@@ -213,12 +213,8 @@
 		</div>
 	</div>
 </section>
-<!-- Smooth Scroll -->
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/smoothscroll.min.js"></script>
 <!-- Loading -->
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/loading.min.js"></script>
-<!-- Hamburger -->
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/slideMenu.min.js"></script>
 <!-- Swiper -->
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/swiper-bundle.min.js"></script>
 <script>

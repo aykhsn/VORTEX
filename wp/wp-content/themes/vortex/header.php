@@ -27,7 +27,7 @@
 <?php wp_body_open(); ?>
 <div class="vt_wrapper">
 <header class="vt_header">
-	<a href="">
+	<a href="<?php bloginfo('url'); ?>/">
 		<img class="fadeIn fadeIn--1" src="<?php echo get_template_directory_uri(); ?>/dist/assets/logo.svg">
 	</a>
 	<nav class="js-menu">
@@ -48,7 +48,7 @@
 				<a href="">Information</a>
 			</li>
 			<li>
-				<a href="">Contact</a>
+				<a href="<?php bloginfo('url'); ?>/contact">Contact</a>
 			</li>
 		</ul>
 	</nav>
@@ -58,4 +58,6 @@
 		<span></span>
 	</button>
 </header>
+<!-- Hamburger -->
+<script src="<?php echo get_template_directory_uri(); ?>/dist/js/slideMenu.min.js"></script>
 <main>
