@@ -4,7 +4,7 @@
 	<div class="vt_cover-inner">
 		<h1><span class="reveal-text">関わる人の</span><br><span class="reveal-text">「もっと」を応援する</span></h1>
 		<p class="fadeIn fadeIn--1">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-		<a href="" class="vt_button fadeIn fadeIn--1"><span>View More</span></a>
+		<a href="<?php bloginfo('url'); ?>/about" class="vt_button fadeIn fadeIn--1"><span>View More</span></a>
 	</div>
 	<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/background.svg" class="js-textAnimation fadeIn fadeIn--3 fadeIn--2d">
 </section>
@@ -18,9 +18,9 @@
 				<h2>システム<br class="vt_tb--view">エンジニアリング<br>サービス事業</h2>
 			</div>
 			<div>
-				<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+				<p>クライアント先にエンジニアが常駐し、特定の業務に対して技術提供するSES（システムエンジニアリングサービス）事業を展開しており、特にシステム基盤（OSからミドルウェア領域）の設計構築や維持保守対応を得意としています。<br>システム設計案件を多く抱えているため、エンジニアのスキルアップに繋がる案件をご案内できます。</p>
 				<div class="vt_button-wrapper">
-					<a href="" class="vt_button"><span>View More</span></a>
+					<a href="<?php bloginfo('url'); ?>/service" class="vt_button"><span>View More</span></a>
 				</div>
 			</div>
 		</div>
@@ -103,7 +103,7 @@
 	        <div class="swiper-button-next"></div>
 	    </div>
 	    <div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="" class="vt_button"><span>View All</span></a>
+			<a href="<?php bloginfo('url'); ?>/" class="vt_button"><span>View All</span></a>
 		</div>
 	</div>
 </section>
@@ -149,7 +149,7 @@
 			</li>
 		</ul>
 		<div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="" class="vt_button"><span>View More</span></a>
+			<a href="<?php bloginfo('url'); ?>/recruit" class="vt_button"><span>View More</span></a>
 		</div>
 	</div>
 </section>
@@ -159,11 +159,11 @@
 			<h1>Recruit</h1>
 		</div>
 		<div>
-			<h2><span>Join</span><span>Our</span><span>Team</span></h2>
-			<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			<h2><span>Fun</span><span>to</span><span>progress</span></h2>
+			<p>昔から「売り手、買い手、世間の3つすべてにとって良い商売を心掛けるべし」という「三方よし」の考え方があります。我々は昔ながらの「三方」を「会社」「お客様」「社員」に置き換え、それぞれが win-win-win の関係を築くことで周囲（世間）へ良い影響を与えることが出来る、という捉え方をしています。<br>会社が成長するためにも、お客様が満足してくださるためにも、エンジニア個々人のスキルアップや日々の仕事への充実感・納得感が必要不可欠です。そのため、我が社では、エンジニアのキャリア設計を汲んだ案件の提供、不必要な費用を削り給与へ還元するシステム等に取り組んでいます。<br>関係する人が全て幸せになる、そんな仕事を一緒にしましょう！</p>
 		</div>
 		<div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="" class="vt_button"><span>View More</span></a>
+			<a href="<?php bloginfo('url'); ?>/recruit" class="vt_button"><span>View More</span></a>
 		</div>
 	</div>
 </section>
@@ -209,7 +209,7 @@
 			</li>
 		</ul>
 		<div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="" class="vt_button"><span>View All</span></a>
+			<a href="<?php bloginfo('url'); ?>/" class="vt_button"><span>View All</span></a>
 		</div>
 	</div>
 </section>

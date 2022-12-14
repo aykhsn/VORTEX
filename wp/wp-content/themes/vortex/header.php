@@ -7,17 +7,6 @@
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/dist/assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/dist/assets/android-chrome-192x192.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-<title>VORTEX</title>
-<meta name="description" content="VORTEX | 関わる人の「もっと」を応援する">
-<meta name="keywords" content="VORTEX, SES, システムエンジニアリングサービス">
-<!-- OGP -->
-<meta property="og:title" content="VORTEX | 関わる人の「もっと」を応援する">
-<meta property="og:description" content="システムエンジニアリングサービスを提供しています。">
-<meta property="og:url" content="">
-<meta property="og:image" content=""><!-- 絶対値で指定 -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="VORTEX">
-<meta property="og:locale" content="ja_JP">
 <!-- Swiper -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/swiper.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/css/swiper-bundle.min.css">
@@ -33,19 +22,19 @@
 	<nav class="js-menu">
 		<ul class="fadeIn fadeIn--1d fadeIn--2">
 			<li>
-				<a href="">About</a>
+				<a href="<?php bloginfo('url'); ?>/about">About</a>
 			</li>
 			<li>
-				<a href="">Service</a>
+				<a href="<?php bloginfo('url'); ?>/service">Service</a>
 			</li>
 			<li>
-				<a href="">Project</a>
+				<a href="<?php bloginfo('url'); ?>/">Project</a>
 			</li>
 			<li>
-				<a href="">Recruit</a>
+				<a href="<?php bloginfo('url'); ?>/recruit">Recruit</a>
 			</li>
 			<li>
-				<a href="">Information</a>
+				<a href="<?php bloginfo('url'); ?>/">Information</a>
 			</li>
 			<li>
 				<a href="<?php bloginfo('url'); ?>/contact">Contact</a>

@@ -6,19 +6,19 @@
 		</a>
 		<ul class="vt_footer-pages">
 			<li>
-				<a href="">About</a>
+				<a href="<?php bloginfo('url'); ?>/about">About</a>
 			</li>
 			<li>
-				<a href="">Service</a>
+				<a href="<?php bloginfo('url'); ?>/service">Service</a>
 			</li>
 			<li>
-				<a href="">Project</a>
+				<a href="<?php bloginfo('url'); ?>/">Project</a>
 			</li>
 			<li>
-				<a href="">Recruit</a>
+				<a href="<?php bloginfo('url'); ?>/recruit">Recruit</a>
 			</li>
 			<li>
-				<a href="">Information</a>
+				<a href="<?php bloginfo('url'); ?>/">Information</a>
 			</li>
 			<li>
 				<a href="<?php bloginfo('url'); ?>/contact">Contact</a>
