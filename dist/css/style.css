@@ -120,6 +120,7 @@ html, body {
 
 main {
   position: relative;
+  margin-top: 5rem;
   z-index: 0;
 }
 
@@ -466,6 +467,7 @@ a {
   --cover-gap: 1rem;
   --cover-text-color: --vt_main-text-color;
   position: relative;
+  margin-top: -5rem;
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
@@ -1358,6 +1360,50 @@ input[type=submit]:hover {
 }
 
 /**********************
+ pagenatin
+***********************/
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+}
+.nav-links .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: var(--vt_main-text-color);
+}
+.nav-links .page-numbers.current {
+  background-color: var(--vt_sub-bg-color);
+}
+.nav-links .page-numbers.next, .nav-links .page-numbers.prev {
+  color: #ffffff;
+  background-color: var(--vt_main-color);
+  -webkit-transition: var(--vt_transition);
+  transition: var(--vt_transition);
+}
+.nav-links .page-numbers.next:hover, .nav-links .page-numbers.prev:hover {
+  background-color: var(--vt_main-text-color);
+}
+
+/**********************
  service
 ***********************/
 .vt_service {
@@ -1579,12 +1625,8 @@ input[type=submit]:hover {
   margin-left: 0.2em;
 }
 @media screen and (max-width: 640px) {
-  .vt_recruit h2 span:nth-child(1) {
+  .vt_recruit h2 span:nth-child(3) {
     display: block;
-  }
-}
-@media screen and (max-width: 640px) {
-  .vt_recruit h2 span:nth-child(2) {
     margin-left: 0;
   }
 }
@@ -1596,6 +1638,9 @@ input[type=submit]:hover {
     margin-left: 0;
     margin-right: 0;
   }
+}
+.vt_recruit p + p {
+  margin-top: 1rem;
 }
 
 /**********************
@@ -1639,6 +1684,7 @@ input[type=submit]:hover {
  page
 ***********************/
 .vt_page-heading {
+  margin-top: -5rem;
   padding-top: 10rem;
   padding-bottom: 4rem;
 }
@@ -1664,6 +1710,99 @@ input[type=submit]:hover {
 }
 .vt_page-content p + h2 {
   margin-top: 3rem;
+}
+.vt_article-list article {
+  border-top: 1px solid #dce0e1;
+}
+.vt_article-list article:last-child {
+  border-bottom: 1px solid #dce0e1;
+}
+.vt_article-list article a {
+  display: block;
+  padding: 3rem 0;
+  color: var(--vt_main-text-color);
+}
+.vt_article-list article a:hover p {
+  text-decoration: underline;
+}
+.vt_article-list article a > * + * {
+  margin-top: 0.5em;
+}
+.vt_article-list article span {
+  margin-left: 1em;
+  padding: 0.2em 0.5em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--vt_sub-bg-color);
+}
+.vt_article-list article .meta {
+  font-size: 0.8rem;
+}
+.vt_article-list article .title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.vt_article-list article .text {
+  font-size: 0.9rem;
+}
+.vt_single article > * + * {
+  margin-top: 1rem;
+}
+.vt_single article h1 {
+  font-size: 2.5rem;
+}
+.vt_single article .content {
+  margin-top: 3rem;
+}
+.vt_single article .content table tr td {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--vt_sub-bg-color);
+}
+.vt_single article .content table tr td:first-child {
+  white-space: nowrap;
+}
+.vt_single article .content h2 {
+  margin-top: 1em;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.vt_single article .content h3 {
+  margin-top: 1em;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.vt_single article .content h4 {
+  margin-top: 1em;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.vt_single article .content ol {
+  list-style: auto;
+}
+.vt_single article .content ul {
+  list-style: disc;
+}
+.vt_single article .content blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--vt_sub-bg-color);
+}
+.vt_single article .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.vt_single article .tags li {
+  padding: 0.2em 0.5em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--vt_sub-bg-color);
+}
+.vt_single article .tags li a {
+  font-weight: 500;
+  color: var(--vt_main-text-color);
+}
+.vt_single article .tags li + li {
+  margin-left: 1em;
 }
 
 /**********************

@@ -27,15 +27,10 @@
     			margin-left: 0.2em;
     		}
 
-    		& span:nth-child(1) {
+    		& span:nth-child(3) {
     			@include mediaQuery(s) {
     				display: block;
-    			}
-    		}
-
-    		& span:nth-child(2) {
-    			@include mediaQuery(s) {
-    				margin-left: 0;
+                    margin-left: 0;
     			}
     		}
     	}
@@ -47,6 +42,10 @@
     			margin-left: 0;
     			margin-right: 0;
     		}
+
+            & + p {
+                margin-top: 1rem;
+            }
     	}
     }
 }

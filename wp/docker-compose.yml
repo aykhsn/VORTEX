@@ -4,7 +4,7 @@ services:
   wordpress:
     image: wordpress:latest # MySQL5.7公式イメージを利用
     ports:
-      - "3001:80" # ポート番号の設定
+      - "3006:80" # ポート番号の設定
     depends_on:
       - mysql # mysqlを立ち上げた後にWordpressを立ち上げる
     env_file: .env # 環境変数の定義に.envを利用

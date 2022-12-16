@@ -6,6 +6,7 @@
 .#{$siteName} {
     &_page {
     	&-heading {
+            margin-top: -5rem;
     		padding-top: 10rem;
     		padding-bottom: 4rem;
 
@@ -37,5 +38,132 @@
     			}
     		}
     	}
+    }
+
+    &_article-list {
+        & article {
+            border-top: 1px solid #dce0e1;
+
+            &:last-child {
+                border-bottom: 1px solid #dce0e1;
+            }
+
+            & a {
+                display: block;
+                padding: 3rem 0;
+                color: var(--#{$siteName}_main-text-color);
+
+                &:hover {
+                    & p {
+                        text-decoration: underline;
+                    }
+                }
+
+                & > * + * {
+                    margin-top: 0.5em;
+                }
+            }
+
+            & span {
+                margin-left: 1em;
+                padding: 0.2em 0.5em;
+                font-size: 0.8rem;
+                font-weight: 600;
+                background-color: var(--#{$siteName}_sub-bg-color);
+            }
+
+            & .meta {
+                font-size: 0.8rem;
+            }
+
+            & .title {
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+
+            & .text {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &_single {
+        & article {
+            & > * + * {
+                margin-top: 1rem;
+            }
+
+            & h1 {
+                font-size: 2.5rem;
+            }
+
+            & .content {
+                margin-top: 3rem;
+
+                & table {
+                    & tr {
+                        & td {
+                            padding: 0.5rem 1rem;
+                            border: 2px solid var(--#{$siteName}_sub-bg-color);
+
+                            &:first-child {
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+
+                & h2 {
+                    margin-top: 1em;
+                    font-size: 2rem;
+                    font-weight: normal;
+                }
+
+                & h3 {
+                    margin-top: 1em;
+                    font-size: 1.6rem;
+                    font-weight: normal;
+                }
+
+                & h4 {
+                    margin-top: 1em;
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                }
+
+                & ol {
+                    list-style: auto;
+                }
+
+                & ul {
+                    list-style: disc;
+                }
+
+                & blockquote {
+                    padding-left: 1rem;
+                    border-left: 2px solid var(--#{$siteName}_sub-bg-color);
+                }
+            }
+
+            & .tags {
+                display: flex;
+
+                & li {
+                    padding: 0.2em 0.5em;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    background-color: var(--#{$siteName}_sub-bg-color);
+
+                    & a {
+                        font-weight: 500;
+                        color: var(--#{$siteName}_main-text-color);
+                    }
+
+                    & + li {
+                        margin-left: 1em;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,36 @@
+@import "../Setting/breakpoints";
+
+/**********************
+ pagenatin
+***********************/
+.nav-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 0;
+
+	& .page-numbers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 3.75rem;
+		width: 3.75rem;
+		border-radius: 50%;
+		font-size: 0.9rem;
+		color: var(--#{$siteName}_main-text-color);
+
+		&.current {
+			background-color: var(--#{$siteName}_sub-bg-color);
+		}
+
+		&.next, &.prev {
+			color: #ffffff;
+			background-color: var(--#{$siteName}_main-color);
+			transition: var(--#{$siteName}_transition);
+
+			&:hover {
+				background-color: var(--#{$siteName}_main-text-color);
+			}
+		}
+	}
+}

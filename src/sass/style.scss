@@ -48,6 +48,7 @@ html, body {
 
 main {
 	position: relative;
+	margin-top: 5rem;
 	z-index: 0;
 }
 
@@ -90,6 +91,7 @@ a {
 @import "Components/form";
 @import "Components/swiperCard";
 @import "Components/swiperCardSwitch";
+@import "Components/pagenation";
 @import "Projects/service";
 @import "Projects/points";
 @import "Projects/recruit";
