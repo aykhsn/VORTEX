@@ -8,7 +8,7 @@ Template Name: Contact
 
 <section class="vt_page">
 	<div class="vt_page-heading vt_block--bg">
-		<div class="vt_block-inner">
+		<div class="vt_block-inner vt_block-inner--s">
 			<h1>Contact</h1>
 			<p>お問い合わせ</p>
 		</div>

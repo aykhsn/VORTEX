@@ -1,6 +1,7 @@
 <% var siteName = 'vt'; %>
 <html lang="ja">
 <%- include( 'Components/_head' ); %>
+<%- include( 'Components/_loading', { siteName:siteName } ); %>
 <body>
 <div class="<%= siteName %>_wrapper">
 <%- include( 'Components/_header', { siteName:siteName } ); %>

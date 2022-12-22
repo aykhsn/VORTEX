@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <section class="vt_page">
 	<div class="vt_page-heading vt_block--bg">
-		<div class="vt_block-inner">
+		<div class="vt_block-inner vt_block-inner--s">
 			<h1><?php single_term_title(); ?></h1>
-			<p><?php the_archive_description(); ?></p>
+			<?php the_archive_description('<div>', '</div>'); ?>
 		</div>
 	</div>
 	<div class="vt_page-content">
@@ -12,9 +12,19 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<article>
 						<a href="<?php the_permalink(); ?>">
-							<ul class="meta">
-								<li><?php the_time('Y年m月d日'); ?></li>
-							</ul>
+							<div class="vt_article-list-items">
+								<time><?php the_time('Y年m月d日'); ?></time>
+								<ul class="vt_tags">
+									<?php
+									$posttags = get_the_tags();
+									if ($posttags) {
+									foreach($posttags as $tag) {
+									echo '<li>' . $tag->name . '</li>';
+									}
+									}
+									?>
+								</ul>
+							</div>
 							<p class="title"><?php the_title(); ?></p>
 							<p class="text">
 								<?php

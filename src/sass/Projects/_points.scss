@@ -79,6 +79,7 @@
                 color: #ffffff;
                 font-size: 14rem;
                 font-style: italic;
+                font-family: var(--#{$siteName}_font-family);
                 line-height: 1;
 
                 @include mediaQuery(s) {
@@ -93,7 +94,6 @@
                 position: relative;
                 font-size: 1.8rem;
                 font-weight: 600;
-                font-family: 'Noto Sans JP', sans-serif;
                 z-index: 1;
 
                 @include mediaQuery(s) {

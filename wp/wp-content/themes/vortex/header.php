@@ -22,19 +22,22 @@
 	<nav class="js-menu">
 		<ul class="fadeIn fadeIn--1d fadeIn--2">
 			<li>
+				<a href="<?php bloginfo('url'); ?>">Top</a>
+			</li>
+			<li>
 				<a href="<?php bloginfo('url'); ?>/about">About</a>
 			</li>
 			<li>
 				<a href="<?php bloginfo('url'); ?>/service">Service</a>
 			</li>
 			<li>
-				<a href="<?php bloginfo('url'); ?>/">Project</a>
+				<a href="<?php bloginfo('url'); ?>/category/project">Project</a>
 			</li>
 			<li>
 				<a href="<?php bloginfo('url'); ?>/recruit">Recruit</a>
 			</li>
 			<li>
-				<a href="<?php bloginfo('url'); ?>/">Information</a>
+				<a href="<?php bloginfo('url'); ?>/category/information">Information</a>
 			</li>
 			<li>
 				<a href="<?php bloginfo('url'); ?>/contact">Contact</a>

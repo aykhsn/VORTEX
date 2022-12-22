@@ -3,9 +3,6 @@
 ***********************/
 .#{$siteName} {
 	&_loading {
-		--loading-bg-color: var(--#{$siteName}_bg-color);
-		--loading-icon-w: 10rem;
-
 		position: fixed;
 		display: flex;
 		align-items: center;
@@ -14,7 +11,7 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: var(--loading-bg-color);
+		background-color: #fff;
 		z-index: 1000;
 		transition: var(--#{$siteName}_transition);
 

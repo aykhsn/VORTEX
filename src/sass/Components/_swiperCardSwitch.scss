@@ -105,18 +105,22 @@
         /**********************
          Media and Title
         ***********************/
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+
         .swiper-slide {
+            height: auto;
             transition: .8s cubic-bezier(.2, 1, .2, 1);
 
             &:hover {
-                & .slide-content {
-                    transform: translateX(0.5rem);
-                }
+                transform: translateX(0.4rem);
             }
         }
 
         .slide {
             position: relative;
+            height: 100%;
             overflow: hidden;
 
             &::before {
@@ -134,16 +138,20 @@
         }
 
         .slide-content {
-            width: 70%;
+            width: 80%;
             padding: 3rem 0;
             transition: var(--#{$siteName}_transition);
         }
 
         .slide-date {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             line-height: 1;
             color: var(--slide-date-text-color);
+
+            @include mediaQuery(s) {
+                font-size: 0.8rem;
+            }
         }
 
         .slide-text {
@@ -151,15 +159,22 @@
             color: var(--slide-title-text-color);
 
             & h2 {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
                 font-weight: 600;
-                font-family: 'Noto Sans JP', sans-serif;
                 color: inherit;
+
+                @include mediaQuery(s) {
+                    font-size: 1.6rem;
+                }
             }
 
             & p {
-                font-size: 0.875rem;
+                font-size: 0.8rem;
                 color: inherit;
+
+                @include mediaQuery(s) {
+                    font-size: 1rem;
+                }
             }
         }
     }

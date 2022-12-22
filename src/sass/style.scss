@@ -5,14 +5,14 @@ $siteName: 'vt';
 ***********************/
 @import "Setting/*";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
 
 :root {
 	--#{$siteName}_full-width: 90rem;
 	--#{$siteName}_transition: all 0.4s ease;
 
 	/* Font */
-	--#{$siteName}_font-family: 'Nunito Sans', 'Noto Sans JP', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic', sans-serif;
+	--#{$siteName}_font-family: 'Nunito Sans', sans-serif;
 	--#{$siteName}_font-ratio: 1.5;
 	--#{$siteName}_font-size-m: 1rem;
 	--#{$siteName}_font-size-s: calc(var(--#{$siteName}_font-size-m) / var(--#{$siteName}_font-ratio));
@@ -31,7 +31,7 @@ $siteName: 'vt';
 	--#{$siteName}_bg-color: #FFFFFF;
 	--#{$siteName}_sub-bg-color: #F0F3F4;
 
-	--#{$siteName}_border-color: #E7EBED;
+	--#{$siteName}_border-color: #dce0e1;
 
 	--#{$siteName}_link-color: #CC4133;
 }
@@ -40,7 +40,7 @@ html, body {
 	font-size: calc(0.9rem + 0.1vw);
 	letter-spacing: 0.07em;
 	line-height: 1.5;
-	font-family: var(--#{$siteName}_font-family);
+	font-family: YuGothic, 游ゴシック体, "Yu Gothic", 游ゴシック, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
 	color: var(--#{$siteName}_main-text-color);
 	background-color: #ffffff;
 	scroll-behavior: smooth;
@@ -58,7 +58,6 @@ img {
 
 p {
 	line-height: 2;
-	font-family: 'Noto Sans JP', sans-serif;
 
 	@include mediaQuery(m) {
 		line-height: 1.7;

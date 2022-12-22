@@ -34,76 +34,47 @@
 		</div>
 	    <div id="mySwiperCardSwitch" class="swiper">
 	        <div class="swiper-wrapper">
-	            <a href="" class="swiper-slide">
+	        	<?php
+	        	$cat_id = get_cat_ID( 'project' );
+	        	$args = array(
+	        		'posts_per_page' => 4,
+	        		'category'=> $cat_id
+	        	);
+	        	$posts = get_posts( $args );
+	        	foreach ( $posts as $post ):
+	        		setup_postdata( $post );
+				?>
+				<a href="<?php the_permalink(); ?>" class="swiper-slide">
 	                <article class="slide">
 	                    <div class="slide-content">
-	                        <time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
+	                        <time class="slide-date"><?php the_time('Y年m月d日'); ?></time>
 	                        <div class="slide-text">
-	                        	<h2>Media系SDK開発</h2>
-	                        </div>
-	                        <div class="slide-text vt_ellipsis">
-	                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+	                        	<h2><?php the_title(); ?></h2>
 	                        </div>
 	                        <div class="slide-text">
-	                            <p>単価 / ポジション / エリア</p>
+	                            <p>
+	                            	<?php
+								if (mb_strlen(strip_tags(get_the_content()), 'UTF-8') > 60) {
+									$content = mb_substr(strip_tags(get_the_content()), 0, 60, 'UTF-8');
+									echo $content . '…';
+								} else {
+									echo strip_tags(get_the_content());
+								}
+								?></p>
 	                        </div>
 	                    </div>
 	                </article>
 	            </a>
-	            <a href="" class="swiper-slide">
-	                <article class="slide">
-	                    <div class="slide-content">
-	                        <time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-	                        <div class="slide-text">
-	                        	<h2>Media系SDK開発</h2>
-	                        </div>
-	                        <div class="slide-text vt_ellipsis">
-	                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-	                        </div>
-	                        <div class="slide-text">
-	                            <p>単価 / ポジション / エリア</p>
-	                        </div>
-	                    </div>
-	                </article>
-	            </a>
-	            <a href="" class="swiper-slide">
-	                <article class="slide">
-	                    <div class="slide-content">
-	                        <time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-	                        <div class="slide-text">
-	                        	<h2>Media系SDK開発</h2>
-	                        </div>
-	                        <div class="slide-text vt_ellipsis">
-	                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-	                        </div>
-	                        <div class="slide-text">
-	                            <p>単価 / ポジション / エリア</p>
-	                        </div>
-	                    </div>
-	                </article>
-	            </a>
-	            <a href="" class="swiper-slide">
-	                <article class="slide">
-	                    <div class="slide-content">
-	                        <time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-	                        <div class="slide-text">
-	                        	<h2>Media系SDK開発</h2>
-	                        </div>
-	                        <div class="slide-text vt_ellipsis">
-	                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-	                        </div>
-	                        <div class="slide-text">
-	                            <p>単価 / ポジション / エリア</p>
-	                        </div>
-	                    </div>
-	                </article>
-	            </a>
+	            <?php
+			        endforeach;
+			        wp_reset_postdata();
+				?>
 	        </div>
 	        <div class="swiper-button-prev"></div>
 	        <div class="swiper-button-next"></div>
 	    </div>
 	    <div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="<?php bloginfo('url'); ?>/" class="vt_button"><span>View All</span></a>
+			<a href="<?php bloginfo('url'); ?>/category/project" class="vt_button"><span>View All</span></a>
 		</div>
 	</div>
 </section>
@@ -175,43 +146,44 @@
 			<h1>Information</h1>
 			<p>最新情報をお知らせします。</p>
 		</div>
-		<ul>
+		<ul class="vt_information-list">
+			<?php
+			$cat_id = get_cat_ID( 'information' );
+        	$args = array(
+        		'posts_per_page' => 3,
+        		'category'=> $cat_id
+        	);
+        	$posts = get_posts( $args );
+        	foreach ( $posts as $post ):
+        		setup_postdata( $post );
+			?>
 			<li>
-				<a href="">
-					<div>
-						<time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-						<span>Media</span>
+				<a href="<?php the_permalink(); ?>">
+					<div class="vt_article-list-items">
+						<time class="slide-date"><?php the_time('Y年m月d日'); ?></time>
+						<ul class="vt_tags">
+							<?php
+							$posttags = get_the_tags();
+							if ($posttags) {
+							foreach($posttags as $tag) {
+							echo '<li>' . $tag->name . '</li>';
+							}
+							}
+							?>
+						</ul>
 					</div>
 					<div>
-						<p>「Forbes JAPAN」2022年10月号にVORTEXが掲載されました</p>
+						<p><?php the_title(); ?></p>
 					</div>
 				</a>
 			</li>
-			<li>
-				<a href="">
-					<div>
-						<time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-						<span>Media</span>
-					</div>
-					<div>
-						<p>「Forbes JAPAN」2022年10月号にVORTEXが掲載されました</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<div>
-						<time class="slide-date" datetime="2021-12-01">2021年12月1日</time>
-						<span>Media</span>
-					</div>
-					<div>
-						<p>「Forbes JAPAN」2022年10月号にVORTEXが掲載されました</p>
-					</div>
-				</a>
-			</li>
+            <?php
+		        endforeach;
+		        wp_reset_postdata();
+			?>
 		</ul>
 		<div class="vt_button-wrapper vt_button-wrapper--right">
-			<a href="<?php bloginfo('url'); ?>/" class="vt_button"><span>View All</span></a>
+			<a href="<?php bloginfo('url'); ?>/category/information" class="vt_button"><span>View All</span></a>
 		</div>
 	</div>
 </section>

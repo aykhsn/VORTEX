@@ -4,6 +4,7 @@ let element = {};
  Event
 ***********************/
 window.addEventListener('DOMContentLoaded', () => {
+	element.loading = document.getElementById('loading');
 	element.body = document.querySelector('body');
 });
 
@@ -18,4 +19,5 @@ window.onload = () => {
 const closeLoadingScreen = () => {
 	element.body.style.overflow = 'auto';
 	element.body.classList.add('loaded');
+	element.loading.classList.add('loaded');
 }

@@ -68,6 +68,7 @@
                 font-weight: 600;
                 letter-spacing: 0.08em;
                 white-space: nowrap;
+                font-family: var(--#{$siteName}_font-family);
 
                 @include mediaQuery(s) {
                     font-size: 1.2rem;
@@ -91,6 +92,15 @@
                 }
             }
 
+            &--l {
+                & h1 {
+                    font-size: 1.2rem;
+
+                    @include mediaQuery(s) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
         }
 
         & h2 {
